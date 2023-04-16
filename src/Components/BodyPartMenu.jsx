@@ -1,16 +1,17 @@
-import React, {  useState } from 'react'
+import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { back, cardio, chest, lowerArms, lowerLegs, neck, shoulders, upperArms, upperLegs, waist } from '../assets';
+import {exercise, bodyParts} from "../utils/index"
 
 import 'swiper/swiper-bundle.min.css';  
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import { useQueryClient } from 'react-query';
-import Load from './Load';
+import "./BodyPartMenu.css";
 
-export default function BodyPartMenu({ bodyParts, setBodyPart, bodyPart,setExercises,setChange }) {
+
+export default function BodyPartMenu({ setBodyPart, bodyPart,setExercises }) {
   
   const breakpoints = {
     768: {
@@ -24,16 +25,9 @@ export default function BodyPartMenu({ bodyParts, setBodyPart, bodyPart,setExerc
     },
   }
 
-
-  const [loading] = useState(false)
-
-  const queryClient = useQueryClient();
-
   
   const handleCard = async (data) => {
-      const filteredData = queryClient
-        .getQueryData('exercises')
-        ?.data?.filter(
+      const filteredData = await exercise?.filter(
         (item) => item.bodyPart.includes(data),
         );   
     setExercises(filteredData);
@@ -44,13 +38,8 @@ export default function BodyPartMenu({ bodyParts, setBodyPart, bodyPart,setExerc
 
   return (
     <section >
-      {
-        loading ?
-          (<Load />)
-          :
-          (
-            <div className="relative  w-[80vw]  mt-10 overflow-hidden ">
-                <Swiper
+        <div className="relative  w-[80vw]  mt-10 overflow-hidden ">
+        <Swiper
                 breakpoints={breakpoints}
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
                 spaceBetween={50}
@@ -59,7 +48,7 @@ export default function BodyPartMenu({ bodyParts, setBodyPart, bodyPart,setExerc
                 onSlideChange={() => console.log('slide change')}
                   onSwiper={(swiper) => console.log(`swiper`)}
                   className='h-[150px]'
-                >
+            >
                 {
                   bodyParts.map((item, index) =>
                     <SwiperSlide
@@ -89,8 +78,6 @@ export default function BodyPartMenu({ bodyParts, setBodyPart, bodyPart,setExerc
                 }
                 </Swiper>
           </div>
-          )
-      }
     </section>
   )
 }

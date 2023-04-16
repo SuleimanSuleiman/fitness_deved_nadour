@@ -33,3 +33,7 @@ li{
 .selected{
       background: linear-gradient(-45deg,#E3BFC3 0%,#DD7A83 30%, #BF9DCD 65%, #E1B79F 100%);
 }
+
+li{
+    color: white;
+}

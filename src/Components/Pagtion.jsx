@@ -2,19 +2,20 @@ import { useState } from "react";
 import ReactPaginate from "react-paginate";
 import "./Pagtion.css"
 
+
 function Items({ currentItems }) {
     return (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {
-                  currentItems.map((element) => (
-                      <div key={element.id} className='rounded-lg  bg-[#ee6570] lg:h-[350px] h-[400px] overflow-hidden'>
-                      <img src={element.gifUrl} alt="Loading ..." className='w-full  h-[65%] object-cover cursor-pointer'/>
-                          <div className="flex flex-row my-2 p-1">
-                              <p className='px-2 py-1 rounded-3xl font-poppins font-medium bg-gradient cursor-pointer select-none'>{element.bodyPart}</p>
-                              <p className='px-2 py-1 rounded-3xl ml-2 font-poppins font-medium bg-gradient cursor-pointer select-none'>{ element.equipment}</p>
+                  currentItems.map((exercise) => (
+                        <div key={exercise.id} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg">
+                          <img className="w-full h-48 object-cover cursor-pointer" src={exercise.gifUrl} alt={exercise.name} />
+                          <div className="p-2">
+                            <h2 className="font-bold font-poppins text-xl mb-2 cursor-pointer text-[#6e3b0d]">{exercise.name}</h2>
+                            <p className="text-gray-700  font-poppins text-base cursor-pointer">{exercise.target} - {exercise.bodyPart}</p>
+                            <p className="text-gray-700  font-poppins text-base cursor-pointer">{exercise.equipment}</p>
                           </div>
-                          <p className='p-1 font-poppins font-medium text-[#6f3400] text-[19px] cursor-pointer'>{ element.name}</p>
-                      </div>
+                        </div>
                   ))
               }
         </div>
@@ -22,8 +23,9 @@ function Items({ currentItems }) {
     );
   }
   
-export default function PaginatedItems({ itemsPerPage, exercises}) {
+export default function PaginatedItems({ itemsPerPage, exercises }) {
 
+  
     const [itemOffset, setItemOffset] = useState(0);
   
     const endOffset = itemOffset + itemsPerPage;

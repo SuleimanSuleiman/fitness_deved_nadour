@@ -1,63 +1,3 @@
-export const data = [
-    {
-        id: "0007",
-        name: "alternate lateral pulldown",
-        bodyPart: "back",
-        equipment: "cable",
-        gifUrl: "http://d205bpvrqc9yn1.cloudfront.net/0007.gif",
-    },
-    {
-        id: "0007",
-        name: "alternate lateral pulldown",
-        bodyPart: "back",
-        equipment: "cable",
-        gifUrl: "http://d205bpvrqc9yn1.cloudfront.net/0007.gif",
-    },
-    {
-        id: "0007",
-        name: "alternate lateral pulldown",
-        bodyPart: "back",
-        equipment: "cable",
-        gifUrl: "http://d205bpvrqc9yn1.cloudfront.net/0007.gif",
-    },
-    {
-        id: "0007",
-        name: "alternate lateral pulldown",
-        bodyPart: "back",
-        equipment: "cable",
-        gifUrl: "http://d205bpvrqc9yn1.cloudfront.net/0007.gif",
-    },
-    {
-        id: "0007",
-        name: "alternate lateral pulldown",
-        bodyPart: "back",
-        equipment: "cable",
-        gifUrl: "http://d205bpvrqc9yn1.cloudfront.net/0007.gif",
-    },
-    {
-        id: "0007",
-        name: "alternate lateral pulldown",
-        bodyPart: "back",
-        equipment: "cable",
-        gifUrl: "http://d205bpvrqc9yn1.cloudfront.net/0007.gif",
-    },
-    {
-        id: "0007",
-        name: "alternate lateral pulldown",
-        bodyPart: "back",
-        equipment: "cable",
-        gifUrl: "http://d205bpvrqc9yn1.cloudfront.net/0007.gif",
-    },
-    {
-        id: "0007",
-        name: "alternate lateral pulldown",
-        bodyPart: "back",
-        equipment: "cable",
-        gifUrl: "http://d205bpvrqc9yn1.cloudfront.net/0007.gif",
-    },
-]
-
-
 export const exercise = [
   {
     "bodyPart": "waist",
@@ -10651,4 +10591,6 @@ export const exercise = [
     "name": "wrist rollerer",
     "target": "forearms"
   }
-]  
+]
+
+export const bodyParts = [ "back", "cardio", "chest", "lower arms", "lower legs", "neck", "shoulders", "upper arms", "upper legs", "waist" ]

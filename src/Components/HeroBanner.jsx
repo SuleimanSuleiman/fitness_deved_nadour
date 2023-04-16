@@ -43,14 +43,14 @@ const HeroBanner = () => {
       <section className='w-full md:h-[80vh] items-center flex sm:flex-row flex-col  sm:pl-[80px] px-1 pt-2'>
           <div className="flex justify-center flex-col sm:text-start text-center w-full relative">
             <h3 className='font-poppins font-semibold mb-[30px] text-gradient text-[30px]'>Fitness Club</h3>
-            <p className='font-poppins font-semibold mb-[30px] leading-[60px] text-[40px] '>
+            <p className='font-poppins font-semibold mb-[30px] leading-[60px] text-[40px] text-dimWhite'>
                   My name is <span className='text-gradient font-semibold'>Daived</span>
                   <br />
                   And I Have skills
                   <br />
                   in <span className='text-gradient'>{text}</span>
             </p>
-            <p className='font-poppins font-medium mb-[25px] text-[18px]'>Check out the most effective exercesive</p> 
+            <p className='font-poppins font-medium mb-[25px] text-[18px] text-white opacity-[40%]'>Check out the most effective exercesive</p> 
             <ExportEcercise />  
               <h1 className='select-none absolute sm:block hidden  -bottom-[110px] left-[35%] text-[110px] font-poppins font-semibold z-0 text-gradient opacity-[30%]'>
                   Exercises
