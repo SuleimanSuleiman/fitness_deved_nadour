@@ -25,7 +25,7 @@ export default function Plan() {
 
 
   return (
-      <section ref={section} className='w-full min-h-[680px] snap-center flex justify-center items-center bg-gradient relative sm:py-0 py-[140px]'>
+      <section ref={section} className='w-full xs:h-[680px] h-[900px] snap-center flex justify-center items-center bg-gradient relative sm:py-0 py-[140px]'>
           <div className=" h-[70vh] sm:w-[70%] w-[92%] uppercase flex justify-center items-center flex-col mb-2">
               <h1 className="text-center tracking-tight leading-[55px] text-white sm:text-[60px] text-[40px] font-bold mb-4">Make healthier<br /> choices</h1>
               <p className="text-center text-dimWhite sm:leading-8 leading-6">

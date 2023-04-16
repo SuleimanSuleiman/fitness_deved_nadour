@@ -21,7 +21,7 @@ export default function Workout() {
   }, [])
 
   return (
-    <section ref={section} className=" md:h-[600px] h-[100%] w-full bg-[url('/src/assets/images/s3.webp')] bg-cover flex md:flex-row flex-col justify-between md:px-12 px-4">
+    <section ref={section} className="overflow-hidden md:h-[600px] h-[100%] w-full bg-[url('/src/assets/images/s3.webp')] bg-cover flex md:flex-row flex-col justify-between md:px-12 px-4">
       <div className=" w-full h-[580px] flex flex-col justify-around md:mb-0 mb-12">
         <h1 className='uppercase sm:text-[90px] text-[60px] leading-[75px] font-bold text-blue-800 md:mb-0 mb-4'>Our Workout Routines</h1>
         <p className='text-white leading-8 text-[22px] font-poppins font-medium md:w-[60%] w-[90%]'>Every body is different, so we make sure you can choose a plan that works best for you.</p>
