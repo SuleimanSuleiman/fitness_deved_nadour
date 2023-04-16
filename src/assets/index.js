@@ -6,6 +6,8 @@ import gym from "./icons/gym.png";
 import leftArrow from "./icons/left-arrow.png";
 import rightArrow from "./icons/right-arrow.png";
 import target from "./icons/target.png";
+import logoFitness from "./icons/s.png";
+
 
 // [ "back","neck", "shoulders", "upper arms", "upper legs", "waist" ]
 
@@ -24,6 +26,10 @@ import upperArms from "./images/upper arms.jfif";
 import upperLegs from "./images/upper legs.jfif";
 import waist from "./images/waist.jfif";
 import back from "./images/back.jfif";
+import bodyImage from "./images/s2.webp";
+import workout from "./images/s3.webp";
+import cycle from "./images/Abstract-Elements-PNG-Download-Image.png";
+import boy from "./images/s4.webp";
 
 /////////////////EXPORT/////////////////////////
 export {
@@ -46,5 +52,10 @@ export {
     upperArms,
     upperLegs,
     waist,
-    back
+    back,
+    bodyImage,
+    logoFitness,
+    cycle,
+    workout,
+    boy
 }

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import ExportEcercise from './ExportEcercise'
-import { deved } from '../assets'
+import { deved } from '../../assets'
 
 
 

@@ -1,8 +1,8 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
-import { back, cardio, chest, lowerArms, lowerLegs, neck, shoulders, upperArms, upperLegs, waist } from '../assets';
-import {exercise, bodyParts} from "../utils/index"
+import { back, cardio, chest, lowerArms, lowerLegs, neck, shoulders, upperArms, upperLegs, waist } from '../../assets';
+import {exercise, bodyParts} from "../../utils/index"
 
 import 'swiper/swiper-bundle.min.css';  
 import 'swiper/css/navigation';

@@ -1,0 +1,24 @@
+.left::before{
+    content: "";
+    width: 140%;
+    height: 680px;
+    position: absolute;
+    background: #141363;
+    top: -4;
+    right: -100%;
+    transition: all 1.5s;
+    -webkit-transition: all 1.5s;
+    -moz-transition: all 1.5s;
+    -ms-transition: all 1.5s;
+    -o-transition: all 1.5s;
+    background-color: rgb(30, 29, 118)
+}
+
+.left.active::before{
+    right: -12%;
+    transform: skewX(12deg);
+    -webkit-transform: skewX(12deg);
+    -moz-transform: skewX(12deg);
+    -ms-transform: skewX(12deg);
+    -o-transform: skewX(12deg);
+}

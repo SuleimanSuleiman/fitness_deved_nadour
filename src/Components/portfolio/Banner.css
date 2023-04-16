@@ -1,0 +1,21 @@
+.text{
+        transform: translateX(-1200px);
+        -webkit-transform: translateX(-1200px);
+        -moz-transform: translateX(-1200px);
+        -ms-transform: translateX(-1200px);
+        -o-transform: translateX(-1200px);
+        opacity: 0%;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+}
+.text.active{
+        transform: translateX(0px);
+        -webkit-transform: translateX(0px);
+        -moz-transform: translateX(0px);
+        -ms-transform: translateX(0px);
+        -o-transform: translateX(0px);
+        opacity: 100%;
+}

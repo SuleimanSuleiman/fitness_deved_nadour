@@ -1,6 +1,6 @@
 import React, {  useState } from 'react'
 import BodyPartMenu from "./BodyPartMenu";
-import { exercise } from "../utils/index";
+import { exercise } from "../../utils/index";
 
 function SearchExercise({ setExercises, setBodyPart,bodyPart }) {
 

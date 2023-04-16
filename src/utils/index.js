@@ -1,3 +1,28 @@
+export const images = [
+  {
+    id:1,
+    url:"/src/assets/images/s2.webp",
+  },
+  {
+    id:2,
+    url:"/src/assets/images/s4.webp",
+  },
+      {
+    id:3,
+    url:"/src/assets/images/back.jfif",
+  },
+    {
+    id:4,
+    url:"/src/assets/images/chest.jfif",
+  },
+  {
+    id: 5,
+    url: "/src/assets/images/brutal-athletic-man-making-pullup-260nw-269763026.webp",
+  }
+]
+
+
+
 export const exercise = [
   {
     "bodyPart": "waist",
