@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import ExportEcercise from './ExportEcercise'
-import { deved } from '../../assets'
-
-
+import "./Hero.css"
 
 const HeroBanner = () => {
 
@@ -40,24 +38,21 @@ const HeroBanner = () => {
     }
 
   return (
-      <section className='w-full md:h-[80vh] items-center flex sm:flex-row flex-col  sm:pl-[80px] px-1 pt-2'>
-          <div className="flex justify-center flex-col sm:text-start text-center w-full relative">
-            <h3 className='font-poppins font-semibold mb-[30px] text-gradient text-[30px]'>Fitness Club</h3>
-            <p className='font-poppins font-semibold mb-[30px] leading-[60px] text-[40px] text-dimWhite'>
-                  My name is <span className='text-gradient font-semibold'>Daived</span>
+      <section className="bg-[url('/src/assets/images/homeImg.jpg')] bg-bottom bg-cover w-full md:h-[680px] h-[700px] items-center flex sm:flex-row flex-col pt-2">
+          <div className="sm:h-fit h-full m-auto flex justify-center flex-col text-start w-full relative sm:pl-12 pl-4">
+            <h3 className='text-white font-poppins font-semibold mb-[30px] text-gradient text-[30px] white-text-black-bg'>Fitness Club</h3>
+            <p className='white-text-black-bg font-poppins font-semibold mb-[30px] sm:leading-[60px] leading-[50px] sm:text-[40px] text-[30px] text-white'>
+                  My name is <span className='text-blue-800 font-semibold blue-text'>Daived</span>
                   <br />
                   And I Have skills
                   <br />
-                  in <span className='text-gradient'>{text}</span>
+                  in <span className='text-blue-800 blue-text-black-bg'>{text}</span>
             </p>
-            <p className='font-poppins font-medium mb-[25px] text-[18px] text-white opacity-[40%]'>Check out the most effective exercesive</p> 
+            <p className='font-poppins font-medium text-[18px] text-white opacity-[40%] sm:mb-[25px] mb-14  '>Check out the most effective exercesive</p> 
             <ExportEcercise />  
-              <h1 className='select-none absolute sm:block hidden  -bottom-[110px] left-[35%] text-[110px] font-poppins font-semibold z-0 text-gradient opacity-[30%]'>
+              <h1 className='select-none absolute sm:block hidden  -bottom-[110px] left-[35%] text-[110px] font-poppins font-semibold z-0 text-dimWhite opacity-[30%]'>
                   Exercises
               </h1>
-          </div>
-          <div className="right w-full h-full sm:bg-[#ff6875] rounded-l-[40%] flex justify-center items-center z-10">
-              <img src={deved} alt="" className='object-contain w-full h-full sm:pr-[80px] pr-0' />
           </div>
     </section>
   )

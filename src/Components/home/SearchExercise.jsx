@@ -1,6 +1,7 @@
-import React, {  useState } from 'react'
+import React, {  useEffect, useRef, useState } from 'react'
 import BodyPartMenu from "./BodyPartMenu";
 import { exercise } from "../../utils/index";
+import { cycle } from '../../assets';
 
 function SearchExercise({ setExercises, setBodyPart,bodyPart }) {
 
@@ -17,23 +18,44 @@ function SearchExercise({ setExercises, setBodyPart,bodyPart }) {
                || item.equipment.toLowerCase().includes(searchValue)
                || item.bodyPart.toLowerCase().includes(searchValue),
         );
-      setSearchValue('');             
+      setSearchValue('');
       setExercises(filteredData);
     }
   };
 
+  
+    const section = useRef(null);
+    const [scrolled, setScrolled] = useState(false);
+  
+      
+      useEffect(() => {
+        const scroll = () => {
+          if (window.scrollY >= section.current.offsetTop -700) {
+            setScrolled(true)
+          } else {
+            setScrolled(false)
+          }
+        }
+        window.addEventListener("scroll", scroll);
+  
+        return () => window.removeEventListener("scroll", scroll);
+      }, [])
   return (
-    <section id="exercise" className='flex flex-col justify-center items-center p-4 sm:mt-[100px] mt-[50px] '>
+
+    <section ref={section} id="exercise" className='bg-black h-[500px] flex flex-col justify-center items-center p-4 sm:mt-[70px] mt-0 '>
+          <img src={cycle} className={`a sm:hidden absolute block w-[140px] h-[140px] opacity-[40%]  left-[220px] -z-1 ${scrolled?"active":""}`} alt="" />
+          <img src={cycle} className={`a sm:hidden absolute block w-[140px] h-[140px] opacity-[40%] bottom-0 right-[180px] -z-1 ${scrolled?"active":""}`} alt="" />
             <h1 className='font-poppins font-semibold sm:text-[42px] text-[32px] text-white sm:mb-12 mb-6 text-center'>Awesome Exercises <br />You  Should Know</h1>
-            <form onSubmit={(e) => handleSearch(e)}  className='flex sm:flex-row flex-col items-center'>
+            <form  className='flex sm:flex-row flex-col items-center'>
               <input
                 type="text"
                 placeholder='Search Exercises'
-                className='text-[#A44D01] p-2 border-none outline-none sm:w-[500px] w-[300px]'
+                className='text-blue-800 p-2 border-none outline-none sm:w-[500px] w-[300px] z-20 '
                 onChange={(e) => setSearchValue(e.target.value)}
               />
-              <button
-                className='cursor-pointer bg-[#A44D01] font-poppins font-semibold w-[150px] outline-none sm:mt-0 mt-1  h-10 text-white'
+        <button
+                onClick={(e) => handleSearch(e)} 
+                className='cursor-pointer bg-gradient font-poppins font-semibold w-[150px] outline-none sm:mt-0 mt-3  h-10 text-white z-20'
               >
                 Search
               </button>

@@ -9,7 +9,7 @@ import Contact from '../Components/portfolio/Contact';
 export default function portfolio() {
 
   return (
-    <section className='snap-mandatory snap-y'>
+    <section className='snap-mandatory snap-y '>
       <Banner />
       <Plan />
       <Workout />

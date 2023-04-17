@@ -8,12 +8,14 @@ function Items({ currentItems }) {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {
                   currentItems.map((exercise) => (
-                        <div key={exercise.id} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg">
-                          <img className="w-full h-48 object-cover cursor-pointer" src={exercise.gifUrl} alt={exercise.name} />
+                    <div key={exercise.id} className="bg-blue-800 rounded-lg overflow-hidden shadow-md hover:shadow-lg cart">
+                          <div className="relative image">
+                              <img className="w-full h-48 object-cover cursor-pointer" src={exercise.gifUrl} alt={exercise.name} />
+                          </div>
                           <div className="p-2">
-                            <h2 className="font-bold font-poppins text-xl mb-2 cursor-pointer text-[#6e3b0d]">{exercise.name}</h2>
-                            <p className="text-gray-700  font-poppins text-base cursor-pointer">{exercise.target} - {exercise.bodyPart}</p>
-                            <p className="text-gray-700  font-poppins text-base cursor-pointer">{exercise.equipment}</p>
+                            <h2 className="font-bold font-poppins text-xl mb-2 cursor-pointer text-black">{exercise.name}</h2>
+                            <p className="text-white  font-poppins text-base cursor-pointer ">{exercise.target} - {exercise.bodyPart}</p>
+                            <p className="text-white  font-poppins text-base cursor-pointer">{exercise.equipment}</p>
                           </div>
                         </div>
                   ))

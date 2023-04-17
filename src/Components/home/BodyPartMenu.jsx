@@ -8,7 +8,6 @@ import 'swiper/swiper-bundle.min.css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import "./BodyPartMenu.css";
 
 
 export default function BodyPartMenu({ setBodyPart, bodyPart,setExercises }) {
@@ -57,7 +56,7 @@ export default function BodyPartMenu({ setBodyPart, bodyPart,setExercises }) {
                     key={index}
                     >
                       <div className="w-full h-full relative  cursor-pointer select-none">
-                        <h1 className='z-30 text-[30px] text-[#6f3400] text-center font-poppins font-semibold absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 '>{item}</h1>
+                        <h1 className='z-30 text-[30px] text-white text-center font-poppins font-semibold absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 '>{item}</h1>
                         <div className={`absolute top-0 bg-gradient ${bodyPart === item?"opacity-[96%]":"opacity-[80%]"} w-full h-full transition-all duration-700 `}></div>
                         <img className=' w-[400px] object-cover h-[150px]' src={
                           (item === 'cardio' && cardio) ||

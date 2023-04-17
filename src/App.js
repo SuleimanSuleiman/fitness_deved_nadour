@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import SidTop from './Components/SidTop';
-import Home from './Components/home/Home';
+import Home from './page/Home';
 import Portfolio from './page/Portfolio.jsx';
 
 function App() {

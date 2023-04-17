@@ -23,7 +23,6 @@ export default function Plan() {
     return () => window.removeEventListener("scroll", scroll);
   }, [])
 
-
   return (
       <section ref={section} className='w-full xs:h-[680px] h-[900px] snap-center flex justify-center items-center bg-gradient relative sm:py-0 py-[140px]'>
           <div className=" h-[70vh] sm:w-[70%] w-[92%] uppercase flex justify-center items-center flex-col mb-2">
@@ -33,8 +32,8 @@ export default function Plan() {
               </p>
               <div className="buttons grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 gap-8 mt-8">
                   <Button name='Varied fitness exercises' to="/home" />
-                  <Button name='Professional guidance' to="email"/>
-                  <Button name='Improved physical performance' to='/home#search' />
+                  <Button name='Professional guidance' to="mailto:ssuleimansuleiman78@gmail.com"/>
+                  <Button name='Improved physical performance' to='/home#exercise' />
               </div>
           </div>
           <img src={cycle} className={`a absolute w-[140px] h-[140px] opacity-[60%] top-[120px] left-[180px] -z-1 ${scrolled?"active":""}`} alt="" />

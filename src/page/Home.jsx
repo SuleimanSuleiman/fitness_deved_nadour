@@ -1,8 +1,8 @@
-import SearchExercise from "./SearchExercise"
-import HeroBanner from "./HeroBanner"
+import SearchExercise from "../Components/home/SearchExercise"
+import HeroBanner from "../Components/home/HeroBanner"
 import { useEffect, useState } from "react"
-import EcercisesList from "./EcercisesList"
-import {exercise} from "../../utils/index"
+import EcercisesList from "../Components/home/EcercisesList"
+import {exercise} from "../utils/index"
 
 const Home = () => {
 
@@ -14,7 +14,7 @@ const Home = () => {
   },[])
 
   return (
-    <section className="bg-gradient  ">
+    <section className="bg-black ">
           <HeroBanner />
           <SearchExercise bodyPart={bodyPart} setBodyPart={setBodyPart} setExercises={setExercises} />
           <EcercisesList  exercises={exercises} setExercises={setExercises} />

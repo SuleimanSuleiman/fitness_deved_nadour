@@ -1,0 +1,20 @@
+@media (max-width: 600px) {
+      .white-text {
+        text-shadow: 0 0 15px #21377e;
+      }
+
+      /* لون النص الأزرق مع خلفية بيضاء */
+      .blue-text {
+        text-shadow: 0 0 15px #fff;
+      }
+
+      /* لون النص الأبيض مع خلفية سوداء */
+      .white-text-black-bg {
+        text-shadow: 0 0 13px #1b368d;
+      }
+
+      /* لون النص الأزرق مع خلفية سوداء */
+      .blue-text-black-bg {
+        text-shadow: 0 0 13px #fff;
+      }
+}

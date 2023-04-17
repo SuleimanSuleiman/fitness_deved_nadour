@@ -15,7 +15,7 @@ import logoFitness from "./icons/s.png";
 import banner from "./images/banner.png";
 import Logo from "./images/Logo.png";
 import Logo1 from "./images/Logo-1.png";
-import deved from "./images/deved.png";
+import deved from "./images/deved2.jpg";
 import cardio from "./images/cardio.jfif";
 import chest from "./images/chest.jfif";
 import lowerArms from "./images/lower arms.jfif";
