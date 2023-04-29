@@ -3,7 +3,6 @@
     width: 140%;
     height: 680px;
     position: absolute;
-    background: #141363;
     top: -4;
     right: -100%;
     transition: all 1.5s;
@@ -11,7 +10,7 @@
     -moz-transition: all 1.5s;
     -ms-transition: all 1.5s;
     -o-transition: all 1.5s;
-    background-color: rgb(30, 29, 118)
+    background-color: #5a0000
 }
 
 .left.active::before{

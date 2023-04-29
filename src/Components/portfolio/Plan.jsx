@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { cycle } from "../../assets/index";
 import Button from "./Button.jsx";
 import "./Plan.css"
+import { Link } from "react-router-dom";
 
 
 export default function Plan() {
@@ -30,11 +31,23 @@ export default function Plan() {
               <p className="text-center text-dimWhite sm:leading-8 leading-6">
                 Welcome to my website, where you'll find a unique approach to fitness that sets us apart from the rest. We specialize in offering a wide range of exercises and workouts that are tailored to your individual needs and goals. Whether you're looking to build muscle, lose weight, or simply maintain your current level of fitness, we've got you covered. Our team of experienced trainers is dedicated to helping you achieve your desired results, and we pride ourselves on providing personalized attention and support every step of the way.   
               </p>
-              <div className="buttons grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 gap-8 mt-8">
-                  <Button name='Varied fitness exercises' to="/home" />
-                  <Button name='Professional guidance' to="mailto:ssuleimansuleiman78@gmail.com"/>
-                  <Button name='Improved physical performance' to='/home#exercise' />
-              </div>
+        <div className="z-40 buttons grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 gap-8 mt-8">
+          <Link to='/home#exercise'>
+            <p className="relative sm:mx-4 mx-auto p-1 border-none sm:w-[200px] w-[190px] sm:h-[80px] h-[60px] text-[14px] font-poppins font-semibold cursor-pointer bg-black text-white flex justify-center items-center">
+              Varied fitness exercises
+            </p>
+          </Link>
+          <Link to='mailto:ssuleimansuleiman78@gmail.com'>
+            <p className="relative sm:mx-4 mx-auto p-1 border-none sm:w-[200px] w-[190px] sm:h-[80px] h-[60px] text-[14px] font-poppins font-semibold cursor-pointer bg-black text-white flex justify-center items-center">
+              Professional guidance
+            </p>
+          </Link>
+          <Link to='/home'>
+            <p className="relative sm:mx-4 mx-auto p-1 border-none sm:w-[200px] w-[190px] sm:h-[80px] h-[60px] text-[14px] font-poppins font-semibold cursor-pointer bg-black text-white flex justify-center items-center">
+              Improved physical performance
+            </p>
+          </Link>
+          </div>
           </div>
           <img src={cycle} className={`a absolute w-[140px] h-[140px] opacity-[60%] top-[120px] left-[180px] -z-1 ${scrolled?"active":""}`} alt="" />
           <img src={cycle} className={`a absolute w-[140px] h-[140px] opacity-[60%] bottom-[120px] right-[180px] -z-1 ${scrolled?"active":""}`} alt="" />

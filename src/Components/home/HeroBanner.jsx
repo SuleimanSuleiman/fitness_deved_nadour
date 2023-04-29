@@ -42,11 +42,11 @@ const HeroBanner = () => {
           <div className="sm:h-fit h-full m-auto flex justify-center flex-col text-start w-full relative sm:pl-12 pl-4">
             <h3 className='text-white font-poppins font-semibold mb-[30px] text-gradient text-[30px] white-text-black-bg'>Fitness Club</h3>
             <p className='white-text-black-bg font-poppins font-semibold mb-[30px] sm:leading-[60px] leading-[50px] sm:text-[40px] text-[30px] text-white'>
-                  My name is <span className='text-blue-800 font-semibold blue-text'>Daived</span>
+                  My name is <span className='text-red-800 font-semibold red-text'>Daived</span>
                   <br />
                   And I Have skills
                   <br />
-                  in <span className='text-blue-800 blue-text-black-bg'>{text}</span>
+                  in <span className='text-red-800 red-text-black-bg'>{text}</span>
             </p>
             <p className='font-poppins font-medium text-[18px] text-white opacity-[40%] sm:mb-[25px] mb-14  '>Check out the most effective exercesive</p> 
             <ExportEcercise />  

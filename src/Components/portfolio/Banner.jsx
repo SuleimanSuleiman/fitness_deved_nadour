@@ -20,10 +20,10 @@ export default function Banner() {
     return () => window.removeEventListener("scroll", onScroll);
   })
   return (
-      <section className={`snap-center xs:h-[680px] h-[100vh] w-full bg-slate-900 sm:bg-[url('/src/assets/images/s2.webp')] bg-[url('/src/assets/images/s3.webp')] bg-cover px-4 sm:px-12`}>
+      <section className={`snap-center xs:h-[680px] h-[100vh] w-full bg-red-900 sm:bg-[url('/src/assets/images/s2.webp')] bg-[url('/src/assets/images/s3.webp')] bg-cover px-4 sm:px-12`}>
           <div className="w-full h-full relative sm:leading-[80px] leading-[45px] uppercase ">
               <h1 className={`absolute  sm:bottom-2 bottom-[30%]  left-0  font-bold text-[40px] sm:text-[40px] md:text-[82px]  text ${scrolled?"active":""}`}>
-                  <span className='text-blue-800'>Prepare<br /> to change<br /></span>
+                  <span className='text-red-800'>Prepare<br /> to change<br /></span>
                   <span className='text-white'>for the better.</span>
               </h1>
           </div>

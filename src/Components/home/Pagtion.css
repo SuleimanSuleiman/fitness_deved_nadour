@@ -9,7 +9,7 @@ li{
     -o-border-radius: 50%;
 }
 .previous,.next{
-    background:  linear-gradient(80deg, rgb(0, 0, 0) 0%, rgb(53, 51, 205) 100%);
+    background:  linear-gradient(80deg, rgb(0, 0, 0) 0%, #e60000  100%);
     padding: 5px;
     border-radius: 50%;
     -webkit-border-radius: 50%;
@@ -31,7 +31,7 @@ li{
 }
 
 .selected{
-      background:  linear-gradient(80deg, rgb(0, 0, 0) 0%, rgb(53, 51, 205) 100%);;
+      background:  linear-gradient(80deg, rgb(0, 0, 0) 0%, #e60000 100%);;
 }
 
 li{
