@@ -50,7 +50,7 @@ function SearchExercise({ setExercises, setBodyPart,bodyPart }) {
               <input
                 type="text"
                 placeholder='Search Exercises'
-                className='text-blue-800 p-2 border-none outline-none sm:w-[500px] w-[300px] z-20 '
+                className='text-red-800 p-2 border-none outline-none sm:w-[500px] w-[300px] z-20 '
                 onChange={(e) => setSearchValue(e.target.value)}
               />
         <button
