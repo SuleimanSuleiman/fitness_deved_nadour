@@ -1,9 +1,11 @@
 import React from 'react'
+import back3 from '../../assets/images/back3.jpg';
 
 export default function Contact() {
   return (
-    <section className="sm:h-[600px] h-[300px] w-full bg-[url('/src/assets/images/contact.png')] bg-cover">
-        <div className="sm:p-12 p-4 sm:w-[40%] w-full h-full flex flex-col justify-around sm:bg-black ">
+      <section className="sm:h-[500px] h-[300px] w-full relative overflow-hidden">
+        <img src={back3} alt='img' className='sm:w-[50%] w-[100%] z-0 absolute bg-cover right-0'/>
+        <div className="sm:p-12 p-4 sm:w-[50%] w-full h-full relative flex flex-col justify-around sm:bg-black ">
               <h1 className='text-red-800 sm:text-[62px] text-[52px] uppercase font-bold leading-[62px] '>Contact Us</h1>
               <div className="text-white font-poppins font-semibold  overflow-hidden bg-black p-2">
                   <h2 className='mb-2 text-red-800 text-[19px]'>

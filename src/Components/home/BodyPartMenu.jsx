@@ -25,11 +25,11 @@ export default function BodyPartMenu({ setBodyPart, bodyPart,setExercises }) {
   }
 
   
-  const handleCard = async (data) => {
-      const filteredData = await exercise?.filter(
-        (item) => item.bodyPart.includes(data),
-        );   
-    setExercises(filteredData);
+  const handleCard =  (data) => {
+    const filteredData = exercise?.filter(
+      (item) => item.bodyPart.includes(data),
+    );
+    if(filteredData) setExercises(filteredData);
     setBodyPart(data)
   };
 
@@ -44,7 +44,7 @@ export default function BodyPartMenu({ setBodyPart, bodyPart,setExercises }) {
                 spaceBetween={50}
                 slidesPerView={3}
                   navigation
-                onSlideChange={() => console.log('slide change')}
+                onSlideChange={() => console.log('slide change')  }
                   onSwiper={(swiper) => console.log(`swiper`)}
                   className='h-[150px]'
             >

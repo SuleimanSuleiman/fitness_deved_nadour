@@ -31,6 +31,7 @@ import workout from "./images/s3.webp";
 import cycle from "./images/Abstract-Elements-PNG-Download-Image.png";
 import boy from "./images/s4.webp";
 
+
 /////////////////EXPORT/////////////////////////
 export {
     Logo,
@@ -57,5 +58,5 @@ export {
     logoFitness,
     cycle,
     workout,
-    boy
+    boy,
 }

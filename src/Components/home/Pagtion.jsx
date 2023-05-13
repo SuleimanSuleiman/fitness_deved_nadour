@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
 import "./Pagtion.css"
 import {Link} from "react-router-dom"
@@ -47,6 +47,11 @@ export default function PaginatedItems({ itemsPerPage, exercises }) {
     window.scrollTo({ top: 1000, behavior: 'smooth' });
     setItemOffset(newOffset);
   };
+
+  useEffect(() => {
+    setItemOffset(0);
+  }, [pageCount,exercises])
+
   
     return (
       <>

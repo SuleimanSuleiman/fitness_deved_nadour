@@ -32,7 +32,7 @@ export default function Exercise() {
         (exer.length > 0 && (
           <>
             <Detail exer={exer} />
-            {/* <VideoDateil name={name} /> */}
+            <VideoDateil name={name} />
             <TargetSimiler target={target} />
             <Equipment equipment={equipment} />
             <Footer />

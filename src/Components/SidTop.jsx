@@ -11,7 +11,7 @@ const SidTop = () => {
       <ul className="list-none links  flex justify-end items-center">
         <li className=" font-medium text-dimWhite font-poppins">
           <NavLink to='/'>
-            Portfolio
+            Home
           </NavLink>
         </li>
         <li className=" font-medium text-dimWhite font-poppins">

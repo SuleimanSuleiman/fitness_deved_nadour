@@ -5,8 +5,10 @@ import Home from './page/Home';
 import Portfolio from './page/Portfolio.jsx';
 import Exercise from './page/Exercise';
 import { QueryClient, QueryClientProvider } from 'react-query';
-
 function App() {
+
+
+
   const queryClient = new QueryClient();
   return (
     <QueryClientProvider client={queryClient}>
