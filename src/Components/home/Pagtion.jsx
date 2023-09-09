@@ -8,7 +8,7 @@ function Items({ currentItems }) {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {
                   currentItems.map((exercise) => (
-                    <Link to={`/exercise/:${exercise.id}`}>
+                    <Link to={`/exercise/${exercise.id}`}>
                       <div key={exercise.id} className="bg-red-800 rounded-lg overflow-hidden shadow-md hover:shadow-lg cart">
                             <div className="relative image">
                                 <img className="w-full h-48 object-cover cursor-pointer" src={exercise.gifUrl} alt={exercise.name} />

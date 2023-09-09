@@ -1,8 +1,8 @@
 import React from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react'
-import { exercise } from '../../utils';
 import { Link } from 'react-router-dom';
+import axios from "axios";
 
 const TargetSimiler = ({ target }) => {
     
@@ -11,10 +11,15 @@ const TargetSimiler = ({ target }) => {
   const [showAll, setShowAll] = useState(false);
 
   useEffect(() => {
-    const data = exercise.filter((element) => element.target === target);
-    if (data) {
-      showAll ? setEcerices(data.slice(0,10)) : setEcerices(data.slice(0, 3));
-    }
+    
+    axios.request({
+      method: 'GET',
+      url: `https://exercisedb.p.rapidapi.com/exercises/target/${target}`,
+      headers: {
+        'X-RapidAPI-Key': '05b5f71414msh855193cdbf73cd3p199802jsn073d054ea6b0',
+        'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
+      }
+    }).then(res => setEcerices(res.data.slice(0,3))).catch(error => console.log(error))
     setLoading(false)
   }, [showAll, target])
   

@@ -8,18 +8,17 @@ function SearchExercise({ setExercises, setBodyPart,bodyPart }) {
   const [searchValue, setSearchValue] = useState(null)
 
   
-  const handleSearch = async (e) => {
-
-    e.preventDefault()
+  const handleSearch = (e) => {
+    e.preventDefault();
     if (searchValue) {    
-      const filteredData = await exercise?.filter(
+      const filteredData = exercise?.filter(
         (item) => item.name.toLowerCase().includes(searchValue)
                || item.target.toLowerCase().includes(searchValue)
                || item.equipment.toLowerCase().includes(searchValue)
                || item.bodyPart.toLowerCase().includes(searchValue),
         );
+        setExercises(filteredData);
       setSearchValue('');
-      setExercises(filteredData);
     }
   };
 
@@ -46,23 +45,25 @@ function SearchExercise({ setExercises, setBodyPart,bodyPart }) {
           <img src={cycle} className={`a sm:hidden absolute block w-[140px] h-[140px] opacity-[40%]  left-[220px] -z-1 ${scrolled?"active":""}`} alt="" />
           <img src={cycle} className={`a sm:hidden absolute block w-[140px] h-[140px] opacity-[40%] bottom-0 right-[180px] -z-1 ${scrolled?"active":""}`} alt="" />
             <h1 className='font-poppins font-semibold sm:text-[42px] text-[32px] text-white sm:mb-12 mb-6 text-center'>Awesome Exercises <br />You  Should Know</h1>
-            <form  className='flex sm:flex-row flex-col items-center'>
+            <form onSubmit={(e) => handleSearch(e)} className='flex sm:flex-row flex-col items-center'>
               <input
                 type="text"
                 placeholder='Search Exercises'
                 className='text-red-800 p-2 border-none outline-none sm:w-[500px] w-[300px] z-20 '
                 onChange={(e) => setSearchValue(e.target.value)}
               />
-        <button
-                onClick={(e) => handleSearch(e)} 
+        <button type='submit'
                 className='cursor-pointer bg-gradient font-poppins font-semibold w-[150px] outline-none sm:mt-0 mt-3  h-10 text-white z-20'
               >
                 Search
               </button>
-            </form>
+      </form>
               <div className="">
                 <BodyPartMenu setExercises={setExercises} setBodyPart={setBodyPart} bodyPart={bodyPart} />
-            </div>
+      </div>
+      {
+        // <h1 className='text-white'>{ exercise.length}</h1>
+      }
     </section>
   )
 }
